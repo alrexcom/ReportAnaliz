@@ -10,7 +10,7 @@ from univunit import (format_date)
 DB_NAME = "test.db"
 
 logging.basicConfig(
-    filename='app.log',
+    filename='../app.log',
     filemode='w',
     format='%(asctime)s - %(name)s - %(levelname)s - %(message)s',
     level=logging.INFO,
@@ -22,8 +22,7 @@ logged = False
 
 class DatabaseManager:
     def __init__(self):
-
-        self.db_name = Path('.').absolute().joinpath('BD').joinpath(DB_NAME)
+        self.db_name = Path('./').absolute().joinpath('BD').joinpath(DB_NAME)
 
     def delete_record(self, date_month_name):
         """

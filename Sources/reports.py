@@ -3,8 +3,7 @@ from datetime import datetime, timedelta
 
 import numpy as np
 
-import univunit
-from univunit import (Univunit, pd, get_week_of_month)
+from univunit import (Univunit, pd)
 # , save_to_json)
 import bd_unit
 
