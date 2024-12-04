@@ -1,0 +1,1 @@
+pyinstaller --paths C:\Яндекс\pro\PythonPro\Iteco\Analiz\Analiz\.venv\Lib\site-packages app.py --onefile -w
