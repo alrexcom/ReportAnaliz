@@ -2,3 +2,4 @@
 /.idea/
 Sources/__pycache__/
 build/
+dist/

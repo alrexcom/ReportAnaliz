@@ -1,3 +1,17 @@
+# -*- coding: utf-8 -*-
+# import logging
+#
+# logging.basicConfig(
+#     filename='app.log',
+#     filemode='w',
+#     format='%(asctime)s - %(name)s - %(levelname)s - %(message)s',
+#     level=logging.INFO,
+#     encoding='utf-8'
+# )
+#
+# logged = False
+#
+import os
 from datetime import datetime
 import tkinter as tk
 from tkinter import (filedialog, font, messagebox)
@@ -7,15 +21,25 @@ from ttkbootstrap import DateEntry
 import lukoil_query as lk
 import jobdays as jdays
 import calc
+
 from reports import (get_data_report, names_reports, get_data_lukoil)
 from univunit import Table, Univunit
 import bd_unit
 
 DB_MANAGER = bd_unit.DatabaseManager()
+ICON_PATH = bd_unit.ICON_PATH
 
 themes = ['cosmo', 'flatly', 'litera', 'minty', 'lumen', 'sandstone',
           'yeti', 'pulse', 'united', 'morph', 'journal', 'darkly',
           'superhero', 'solar', 'cyborg', 'vapor', 'simplex', 'cerculean']
+
+# def log_save(message, type_='info'):
+#     if logged:
+#         # Здесь может быть ваш код для уведомления пользователя
+#         if type_ == 'info':
+#             logging.info(message)  # Логирование информационного сообщения
+#         else:
+#             logging.error(message)
 
 
 def prompt_file_selection():
@@ -34,6 +58,13 @@ class App(tk.Tk):
         self.bold_font = font.Font(family='Helvetica', size=13, weight='bold')
         self.title(title)
 
+        # Замена иконки окна
+        if os.path.exists(ICON_PATH):
+            self.iconbitmap(ICON_PATH)
+        # else:
+        #     log_save(f"Файл {icon_path} не найден.")
+
+        # self.iconbitmap('analysis24.ico')
         self.geometry(f"{size[0]}x{size[1]}")
         # self.one_hour_fte = None
         self.fte_frame = None

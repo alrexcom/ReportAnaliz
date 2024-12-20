@@ -1,3 +1,5 @@
+# -*- coding: utf-8 -*-
+import os
 import tkinter as tk
 from datetime import datetime
 from tkinter import messagebox
@@ -7,7 +9,7 @@ from univunit import Table, Univunit
 from ttkbootstrap import DateEntry, ttk
 
 DB_MANAGER = bd_unit.DatabaseManager()
-
+ICON_PATH = bd_unit.ICON_PATH
 
 class JobDaysApp(tk.Toplevel):
     def __init__(self, parent):
@@ -17,7 +19,8 @@ class JobDaysApp(tk.Toplevel):
         self.title("Добавление рабочих дней для получения FTE")
         self.hours_var = tk.IntVar()
         self.middle_days_var = tk.StringVar()
-
+        if os.path.exists(ICON_PATH):
+            self.iconbitmap(ICON_PATH)
         self.result_label = None
         self.mdf = None
 

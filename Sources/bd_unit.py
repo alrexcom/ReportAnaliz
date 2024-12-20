@@ -1,13 +1,16 @@
+# -*- coding: utf-8 -*-
 from datetime import datetime
 import sqlite3
 from pathlib import Path
 import logging
 import pandas as pd
 
-import univunit
+# import univunit
 from univunit import (format_date)
 
 DB_NAME = "test.db"
+ICON_PATH = 'BD/analysis24.ico'
+
 
 logging.basicConfig(
     filename='../app.log',

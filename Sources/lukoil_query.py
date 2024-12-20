@@ -1,3 +1,5 @@
+# -*- coding: utf-8 -*-
+import os
 import tkinter as tk
 from datetime import datetime
 from tkinter import messagebox
@@ -10,7 +12,7 @@ from univunit import Table, Univunit
 # from reports import get_data_lukoil
 import bd_unit
 DB_MANAGER = bd_unit.DatabaseManager()
-
+ICON_PATH = bd_unit.ICON_PATH
 
 class LukoilQueries(tk.Toplevel):
     def __init__(self, parent):
@@ -23,7 +25,8 @@ class LukoilQueries(tk.Toplevel):
         self.num_task = tk.StringVar()
         self.description = None
         self.result_label = None
-
+        if os.path.exists(ICON_PATH):
+            self.iconbitmap(ICON_PATH)
         self.create_widgets()
 
         self.table_fte = Table(self, height=50)

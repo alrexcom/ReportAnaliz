@@ -1,7 +1,10 @@
+# -*- coding: utf-8 -*-
+import os
 import tkinter as tk
 import univunit
 import bd_unit
 DB_MANAGER = bd_unit.DatabaseManager()
+ICON_PATH = bd_unit.ICON_PATH
 
 class CalcApp(tk.Toplevel):
     def __init__(self, parent):
@@ -9,6 +12,8 @@ class CalcApp(tk.Toplevel):
 
         self.geometry("400x200")
         self.title("Калькулятор")
+        if os.path.exists(ICON_PATH):
+            self.iconbitmap(ICON_PATH)
         self.hours_var = tk.IntVar()
         self.var_fte = tk.StringVar()
         self.fte_on_month = tk.IntVar()

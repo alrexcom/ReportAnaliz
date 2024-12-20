@@ -1,3 +1,4 @@
+# -*- coding: utf-8 -*-
 import tkinter as tk
 from datetime import date, datetime, timedelta
 from tkinter import messagebox
