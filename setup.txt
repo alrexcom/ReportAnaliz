@@ -1,1 +1,2 @@
 pyinstaller --paths C:\Яндекс\pro\PythonPro\Iteco\Analiz\Analiz\.venv\Lib\site-packages app.py --onefile -w
+pyinstaller --paths C:\pro\PythonPro\ReportAnaliz\.venv\Lib\site-packages Sources\app.py --onefile -w

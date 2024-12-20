@@ -2,8 +2,8 @@
 
 
 a = Analysis(
-    ['app.py'],
-    pathex=['C:\\Яндекс\\pro\\PythonPro\\Iteco\\Analiz\\Analiz\\.venv\\Lib\\site-packages'],
+    ['Sources\\app.py'],
+    pathex=['C:\\pro\\PythonPro\\ReportAnaliz\\.venv\\Lib\\site-packages'],
     binaries=[],
     datas=[],
     hiddenimports=[],
