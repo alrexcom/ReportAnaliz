@@ -1,7 +1,3 @@
 /app.log
-/.idea/.gitignore
-/.idea/misc.xml
-/.idea/inspectionProfiles/profiles_settings.xml
-/.idea/inspectionProfiles/Project_Default.xml
-/.idea/ReportAnaliz.iml
-/.idea/vcs.xml
+/.idea/
+Sources/__pycache__/
